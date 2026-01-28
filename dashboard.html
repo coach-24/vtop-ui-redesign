@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VTOP | VIT-AP University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="icon" type="image/x-icon" href="assets/icons/VIT-AP_University_seal.png">
+
+</head>
+
+<body>
+<!-- APP SKELETON -->
+<div id="appSkeleton">
+
+  <!-- TOPBAR SKELETON -->
+  <div class="skeleton skeleton-topbar">
+    <div class="skeleton skeleton-nav-title"></div>
+    <div class="skeleton skeleton-avatar"></div>
+  </div>
+
+  <!-- SIDEBAR SKELETON -->
+  <div class="skeleton-sidebar">
+    <div class="skeleton-logo"></div>
+    <div class="skeleton-icon"></div>
+    <div class="skeleton-icon"></div>
+    <div class="skeleton-icon"></div>
+    <div class="skeleton-icon"></div>
+    <div class="skeleton-icon"></div>
+  </div>
+
+</div>
+
+
+<!-- TOP NAVBAR -->
+<div class="topbar">
+
+  <div class="top-left">
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <span class="brand">VIT-AP UNIVERSITY</span>
+
+    <button class="quick-links">
+      ⭐ Quick Links ▾
+    </button>
+  </div>
+
+  <div class="top-right">
+    
+    <div class="profile" onclick="toggleProfile()">
+      <img src="https://i.pravatar.cc/40" class="avatar">
+      <span class="regno">2XBCE1XXX</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="profile-card" id="profileCard">
+  <img src="https://i.pravatar.cc/100" class="profile-pic">
+  <h4>XYZ..</h4>
+  <p>2XBCE1XXX</p>
+  <button class="btn dark-btn" onclick="toggleDark()">
+    🌙 Toggle Dark Mode
+  </button>
+  <button class="btn blue">Login History</button>
+  <button class="btn " onclick="signOut()">Sign Out</button>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar collapsed" id="sidebar">
+
+  <div class="logo">VTOP</div>
+
+  <!-- CONTACT -->
+  <div class="menu-item">
+    <span class="icon">📞</span>
+    <span class="text">Contact Us</span>
+  </div>
+
+  <!-- MY INFO -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">👤</span>
+      <span class="text">My Info</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <a href="./pages/profile.html" class="submenu-item">Profile</a>
+    </div>
+  </div>
+
+  <!-- INFO CORNER -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">ℹ️</span>
+      <span class="text">Info Corner</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Announcements</div>
+      <div class="submenu-item">Circulars</div>
+    </div>
+  </div>
+
+  <!-- MENTOR -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">🧑‍🏫</span>
+      <span class="text">Mentor</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Mentor Details</div>
+    </div>
+  </div>
+
+  <!-- COURSE ENROLLMENT -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">📚</span>
+      <span class="text">Course Enrollment</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Add / Drop</div>
+      <div class="submenu-item">Registered Courses</div>
+    </div>
+  </div>
+
+  <!-- ACADEMICS -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">🎓</span>
+      <span class="text">Academics</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item" onclick="showPage('attendancePage')">Attendance</div>
+      <a href="./pages/timetable.html" class="submenu-item">Time Table</a>
+      <div class="submenu-item">Courses</div>
+    </div>
+  </div>
+
+  <!-- EXAMINATION -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">📝</span>
+      <span class="text">Examination</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item" onclick="showPage('examsPage')">Exam Schedule</div>
+      <div class="submenu-item">Grades</div>
+      <div class="submenu-item">Re-Evaluation</div>
+    </div>
+  </div>
+
+  <!-- LIBRARY -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">📖</span>
+      <span class="text">Library</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Issued Books</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">🛠️</span>
+      <span class="text">Services</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Bonafide</div>
+      <div class="submenu-item">Certificates</div>
+    </div>
+  </div>
+
+  <!-- HOSTELS -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">🏠</span>
+      <span class="text">Hostels</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Room Details</div>
+    </div>
+  </div>
+
+  <!-- MY ACCOUNT -->
+  <div class="menu-group">
+    <div class="menu-item expandable" onclick="toggleSubMenu(this)">
+      <span class="icon">🔐</span>
+      <span class="text">My Account</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="submenu">
+      <div class="submenu-item">Change Password</div>
+      <div class="submenu-item">Logout</div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- MAIN -->
+<div class="main">
+
+
+ <!-- DASHBOARD -->
+<section id="dashboardPage" class="page active">
+
+  <!-- SKELETON -->
+  <div class="skeleton-wrapper" id="dashboardSkeleton">
+    <div class="skeleton skeleton-title"></div>
+    <div class="skeleton skeleton-card"></div>
+  </div>
+
+  <!-- REAL CONTENT -->
+  <div class="dashboard-content" id="dashboardContent">
+    <h1>Welcome, Student 👋</h1>
+
+    <div class="notification-card">
+      <h3>📌 Important Notifications</h3>
+      <ul>
+        <li>🔔 Alumni Login Enabled for 5th Convocation Graduates</li>
+        <li>⚡ Student Online Quiz URL / Assessment Link Available</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+
+  <!-- ATTENDANCE -->
+  <section id="attendancePage" class="page attendance-pag">
+
+  <div class="attendance-header">
+    <h2>📊 Attendance Overview</h2>
+    <select class="semester-select">
+      <option>Winter Semester 2025-26 - AMR</option>
+    </select>
+  </div>
+
+  <div class="attendance-grid">
+
+    <div class="att-card">
+      <h4>Theory of Computation</h4>
+      <p>15 / 18 Classes</p>
+      <div class="progress">
+        <div class="progress-bar green" style="--value:84%"></div>
+      </div>
+      <span class="percent green-text">84%</span>
+    </div>
+
+    <div class="att-card">
+      <h4>NLP Embedded Lab</h4>
+      <p>8 / 12 Classes</p>
+      <div class="progress">
+        <div class="progress-bar red" style="--value:67%"></div>
+      </div>
+      <span class="percent red-text">67%</span>
+    </div>
+
+    <div class="att-card">
+      <h4>Web Tech Theory</h4>
+      <p>9 / 12 Classes</p>
+      <div class="progress">
+        <div class="progress-bar orange" style="--value:75%"></div>
+      </div>
+      <span class="percent orange-text">75%</span>
+    </div>
+
+    <div class="att-card">
+      <h4>Web Tech Lab</h4>
+      <p>10 / 12 Classes</p>
+      <div class="progress">
+        <div class="progress-bar green" style="--value:84%"></div>
+      </div>
+      <span class="percent green-text">84%</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- EXAMS -->
+<section id="examsPage" class="page">
+  <h2>Exam Schedule</h2>
+
+  <div class="attendance-box">
+    <label>Select Semester</label><br>
+    <select>
+      <option>Fall Semester 2025-26</option>
+    </select>
+    <button style="margin-left:10px;padding:8px 14px;">Search</button>
+  </div>
+
+  <p style="color:red;font-weight:bold;">
+    Exam Reporting Time : 30 minutes before schedule
+  </p>
+
+  <table>
+    <tr>
+      <th>Course Code</th>
+      <th>Course Title</th>
+      <th>Slot</th>
+      <th>Date</th>
+      <th>Session</th>
+      <th>Time</th>
+      <th>Venue</th>
+    </tr>
+
+    <tr>
+      <td>CSE2008</td>
+      <td>Operating Systems</td>
+      <td>A1+TA1</td>
+      <td>21-Nov-2025</td>
+      <td>FN</td>
+      <td>10:00 AM - 01:00 PM</td>
+      <td>CB-315</td>
+    </tr>
+
+    <tr>
+      <td>CSE4006</td>
+      <td>Deep Learning</td>
+      <td>C1+TC1</td>
+      <td>26-Nov-2025</td>
+      <td>FN</td>
+      <td>10:00 AM - 01:00 PM</td>
+      <td>CB-317</td>
+    </tr>
+  </table>
+</section>
+
+</div>
+<script src="./js/dashboard.js"></script>
+</body>
+</html>

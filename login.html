@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VTOP | VIT-AP University</title>
+
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="login-topbar">
+    <img src="assets/icons/VIT-AP_University_seal.png" alt="VIT Logo">
+    <span>VIT-AP UNIVERSITY</span>
+  </div>
+
+  <!-- LOGIN CARD -->
+  <div class="login-wrapper">
+    <div class="login-container">
+      <h2>VTOP Login</h2>
+      <p class="subtitle">Sign in to continue</p>
+
+      <div class="field">
+        <input type="text" id="regno" required>
+        <label>Registration Number</label>
+      </div>
+
+      <div class="field password-field">
+        <input type="password" id="password" required>
+        <label>Password</label>
+        <span class="eye" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <button class="login-btn" id="loginBtn" onclick="login()">
+        <span id="btnText">Login</span>
+        <span class="spinner hidden" id="spinner"></span>
+      </button>
+
+
+      <div class="links">
+        <a href="#">Forgot Password?</a>
+        <a href="#">Forgot Login ID?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Made with ❤️ by Coach
+  </footer>
+
+<script src="js/login.js"></script>
+</body>
+</html>
