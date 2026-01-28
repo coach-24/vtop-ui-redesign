@@ -16,6 +16,22 @@ This project focuses on clean UI, modular structure, and improved user experienc
 - Responsive and clean UI
 
 ---
+---
+
+## ℹ️ Note to Viewers
+
+This project is under active development.  
+Additional sections such as **Courses**, **Examination**, **Library**, **Services**, and **Hostels** will be implemented gradually as separate pages, following the same modular structure used in the current pages.
+
+Each new section will include:
+- A dedicated external HTML file
+- Separate CSS for styling
+- Separate JavaScript for logic and interactions
+
+This approach ensures better scalability, maintainability, and clean architecture.
+
+---
+
 
 ## 🧱 Project Structure
 ```
