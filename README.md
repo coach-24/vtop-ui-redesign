@@ -65,7 +65,17 @@ git clone https://github.com/your-username/vtop-ui-redesign.git
 2. Login to access dashboard.html
 ```
 
----
+## 🔐 Demo Login Credentials
+
+Registration Number:
+```
+23BCE1234
+```
+
+Password:
+```
+vit@123
+```
 
 ## 🚧 Future Enhancements
 - Courses page
